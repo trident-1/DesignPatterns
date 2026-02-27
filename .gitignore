@@ -38,3 +38,6 @@ out/
 
 # Ignore Kotlin plugin data
 .kotlin
+
+# postman
+.postman

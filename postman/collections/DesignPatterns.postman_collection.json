@@ -1,0 +1,100 @@
+{
+  "info": {
+    "_postman_id": "a3d65dfe-483a-4db5-a8fa-f64106a6b1b4",
+    "name": "DesignPatterns",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "ObserverPattern",
+      "item": [
+        {
+          "name": "weather",
+          "id": "e8bf0583-e97a-4a38-94f5-1a99f5245a6a",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"temperature\" : 25.8,\r\n    \"pressure\" : 10.1,\r\n    \"humidity\" : 13.6\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/weather",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "weather"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "unsubscribe-observer",
+          "id": "1ff6021a-e827-4ba2-ad4d-cba0d0ddbfd3",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/observers/weather/unsubscribe?observer=current",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "observers",
+                "weather",
+                "unsubscribe"
+              ],
+              "query": [
+                {
+                  "key": "observer",
+                  "value": "current"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "subscribe-observer",
+          "id": "bfd3ffc0-40ba-4a46-a2d8-7706a64a28bf",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/observers/weather/subscribe?observer=current",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "observers",
+                "weather",
+                "subscribe"
+              ],
+              "query": [
+                {
+                  "key": "observer",
+                  "value": "current"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "5cbc4f4a-7381-4ba5-b03a-7f4dd1fc0239"
+    }
+  ]
+}
