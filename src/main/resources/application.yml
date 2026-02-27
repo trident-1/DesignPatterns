@@ -1,3 +1,11 @@
 spring:
   application:
     name: DesignPatterns
+
+logging:
+  structured:
+    format:
+      console: ecs
+      service:
+        name: DesignPatterns
+        version: 0.0.1-SNAPSHOT
